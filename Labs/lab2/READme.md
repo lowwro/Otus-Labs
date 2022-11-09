@@ -250,9 +250,9 @@ Leaf 03: 1.0.0.3
 ###### * sh ip ospf int br - Spine00*
 ![Изображение](./commands1_2.PNG)
 ###### * sh ip ospf neigh - Spine00*
-![Изображение](./commands_2.PNG)
+![Изображение](./Commands_2.PNG)
 ###### * sh ip ospf int br -Spine02*
-![Изображение](./commands_2_2.PNG)
+![Изображение](./Commands_2_2.PNG)
 ###### * sh ip ospf neigh - Spine02*
 
 

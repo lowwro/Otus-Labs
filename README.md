@@ -2,4 +2,4 @@
 ## Щеголев Глеб
 
 
-[Лабораторные работы](./Otus-Labs)
+[Лабораторные работы](https://github.com/lowwro/Otus-Labs/tree/main/Labs)

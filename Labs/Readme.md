@@ -4,3 +4,5 @@
 [Лабораторная работа 2. Построение Underlay сети(OSPF)](https://github.com/lowwro/Otus-Labs/tree/main/Labs/lab2)
 
 [Лабораторная работа 3. Построение Underlay сети(ISIS)](https://github.com/lowwro/Otus-Labs/tree/main/Labs/lab3)
+
+[Лабораторная работа 4. Построение Underlay сети(eBGP)](https://github.com/lowwro/Otus-Labs/tree/main/Labs/lab4)

@@ -89,18 +89,23 @@ Leaf05: 1.0.0.5
 - Применим bestpath as-path multipath-relax
 - Будем использовать редистрибьюцию и route-map при анонсе локальных префиксов на Leaf коммутаторах
 
-Далее приведем шаблон конфигурации BGP  на примере Spine00:
+Далее приведем шаблон конфигурации BGP  на примере *Spine00:*
 
 Сперва включим на Cisco Nexus опцию использования протокола BGP
 
 	feature bgp
 
-Создадим инстанс протокола и укажем AREA ID, укажем доп.опции и создадим соседства
+Создадим route-map для редестрибьюции connected сетей и гибкого управления маршрутами,инстанс протокола и укажем AREA ID, укажем доп.опции и создадим соседства
 
+	
+	route-map REDISTRIBUTE_CONNECTED permit 10
+		match interface lo0
+		match interface lo1
 	router bgp 65600
 		router-id 1.0.0.0
 			bestpath as-path multipath-relax
 			address-family ipv4 unicast
+			redistribute direct route-map REDISTRIBUTE_CONNECTED
 			maximum-paths 64
 			neighbour 10.2.0.2
 				remote-as 65601		
@@ -124,7 +129,7 @@ Leaf05: 1.0.0.5
 					advertisement-interval 1
 
 
-Затем привдет шаблон конфигурации BGP на примере Leaf05
+Затем привдет шаблон конфигурации BGP на примере *Leaf05*
 
 	feature bgp
 	route-map REDISTRIBUTE_CONNECTED permit 10
@@ -281,7 +286,7 @@ Leaf05: 1.0.0.5
 ![Изображение](./bgpsum02.PNG)
 ###### Рис 2. Соседство BGP Spine02
 
-Затем посмотрим пришедшие маршруты на Spine00,Spine02,Leaf03
+Затем посмотрим итоговые маршруты на наших устройствах:
 
 		
 ![Изображение](./routespin00.PNG)
@@ -290,20 +295,17 @@ Leaf05: 1.0.0.5
 ![Изображение](./routespin02.PNG)
 ###### Рис 4. BGP table Spine02
 
+![Изображение](./routeleaf01.PNG)
+###### Рис 5. BGP table Leaf01
+
 ![Изображение](./routeleaf03.PNG)
 ###### Рис 5. BGP table Leaf03
+
+![Изображение](./routeleaf05.PNG)
+###### Рис 5. BGP table Leaf05
 
 
 
 Как видим все соседства успешно построены и устройства обменялись маршрутной информацией.Сетевая доступность хостов обеспечена.
 
-*Конфигурация устройств*
-
-1. [Spine00](Spine00.conf)
-2. [Spine02](Spine02.conf)
-3. [Leaf01](Leaf01.conf)
-4. [Leaf03](Leaf03.conf)
-5. [Leaf05](Leaf05.conf)
-
-
-#### На этом лабораторную работу №4 считаю завершенной
+#### На этом лабораторную работу №3 считаю завершенной

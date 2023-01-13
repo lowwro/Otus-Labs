@@ -350,4 +350,12 @@ Server3-Server4(vlan20)
 Как видим все соседства успешно настроены,underlay,overlay,EVPN L2 связанность обеспечена.
 
 
+Конфигурация устройств
+
+1. [Spine00](Spine00.conf)
+2. [Spine02](Spine02.conf)
+3. [Leaf01](Leaf01.conf)
+4. [Leaf03](Leaf03.conf)
+5. [Leaf05](Leaf05.conf)
+
 #### На этом лабораторную работу №5 считаю завершенной

@@ -6,3 +6,5 @@
 [Лабораторная работа 3. Построение Underlay сети(ISIS)](https://github.com/lowwro/Otus-Labs/tree/main/Labs/lab3)
 
 [Лабораторная работа 4. Построение Underlay сети(eBGP)](https://github.com/lowwro/Otus-Labs/tree/main/Labs/lab4)
+
+[Лабораторная работа 5. VxLAN EVPN L2](https://github.com/lowwro/Otus-Labs/tree/main/Labs/lab5)

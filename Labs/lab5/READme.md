@@ -168,8 +168,8 @@ Leaf05: 1.0.0.5
 		address-family l2vpn evpn
 			send-community
 			send-community extended
-	 Leaf05
-	 nv overlay evpn
+	Leaf05
+	nv overlay evpn
 	router bgp 65606
 	
 	neighbor 10.0.1.1
@@ -331,7 +331,7 @@ Server3-Server4(vlan20)
 По-моему здесь ничего не вызывает подозрений,посмотрим теперь сетевую доступность Server3-4(vlan 20)
 
 
- Как видим доступность от Server3 также имеется
+ Как видим доступность от Server3 до Server 4 также имеется
  
 ![Изображение](./Server3.PNG)
 ###### Рис 1. ICMP response Server3

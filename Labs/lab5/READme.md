@@ -140,7 +140,7 @@ Leaf05: 1.0.0.5
 			send-community
 			send-community extended
 	neighbor 10.0.5.1
-			remote-as 65605
+		remote-as 65605
 		update-source loopback0
 		ebgp-multihop 2
 		timers 3 9

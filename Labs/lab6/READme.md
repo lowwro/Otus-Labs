@@ -168,7 +168,7 @@ Leaf05 - 5:300
 			no sh
 
 	Leaf03
-				fabric forwarding anycast-gateway-mac 64e0.9440.1001
+		fabric forwarding anycast-gateway-mac 64e0.9440.1001
 		vrf context PROD
 		vni 100300 
 		rd 3:300
@@ -200,7 +200,7 @@ Leaf05 - 5:300
 			fabric forwarding mode anycast-gateway
 			no sh
 	Leaf05
-			fabric forwarding anycast-gateway-mac 64e0.9440.1001
+		fabric forwarding anycast-gateway-mac 64e0.9440.1001
 		vrf context PROD
 		vni 100300 
 		rd 5:300

@@ -14,3 +14,5 @@
 [Лабораторная работа 5. VxLAN EVPN L2](https://github.com/lowwro/Otus-Labs/tree/main/Labs/lab5)
 
 [Лабораторная работа 6. VxLAN EVPN L3](https://github.com/lowwro/Otus-Labs/tree/main/Labs/lab6)
+
+[Лабораторная работа 7. VxLAN VPC](https://github.com/lowwro/Otus-Labs/tree/main/Labs/lab7)

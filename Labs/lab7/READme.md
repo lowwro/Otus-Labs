@@ -168,6 +168,7 @@ VPC(Virtual Port Channel) - это проприетарная технологи
  		channel-group 5
 
 Настроим хост:
+(P.S. В лабе Eve-ng есть баг,LACP не собиратеся,испозуем ручной режим)
 
 	interface Vlan10
 		ip address 10.4.10.10 255.255.255.0
@@ -175,14 +176,22 @@ VPC(Virtual Port Channel) - это проприетарная технологи
 	interface Vlan10
 		ip address 10.4.10.10 255.255.255.0
 	interface Port-channel1
-		switchport access vlan 10
-		switchport mode access
+		 switchport trunk encapsulation dot1q
+		 switchport mode trunk
 	interface GigabitEthernet0/0
-		switchport mode access
-		channel-group 1 mode on
+		 switchport trunk encapsulation dot1q
+		 switchport mode trunk
+		 media-type rj45
+		 negotiation auto
+		 channel-group 1 mode on
 	interface GigabitEthernet0/1
-		switchport mode access
-		channel-group 1 mode on
+		 switchport trunk encapsulation dot1q
+		 switchport mode trunk
+		 media-type rj45
+		 negotiation auto
+		 channel-group 1 mode on
+		 
+		 
 Проверим успешно ли настроился агрегированный порт и конфигурацию VPC домена:
 
 ![Изображение](./leaf01_shvpc.PNG)
